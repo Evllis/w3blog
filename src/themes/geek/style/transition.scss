@@ -1,0 +1,11 @@
+@mixin pre($style, $value) {
+    -webkit-#{$style}: #{$value};
+    -moz-#{$style}: #{$value};
+    -ms-#{$style}: #{$value};
+    -o-#{$style}: #{$value};
+    #{$style}: #{$value};
+}
+
+@mixin trans($value: color .2s ease) {
+    @include pre('transition', $value);
+}
